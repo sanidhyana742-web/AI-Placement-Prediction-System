@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Placement Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Placement Prediction System</h1>
+
+        <form action="/predict" method="post">
+
+            <label>CGPA</label>
+            <input type="number" step="0.01" name="cgpa" required>
+
+            <label>Backlogs</label>
+            <input type="number" name="backlogs" required>
+
+            <label>Coding Skills (1-10)</label>
+            <input type="number" name="coding_skills">
+
+            <label>DSA Score</label>
+            <input type="number" name="dsa_score">
+
+            <label>Aptitude Score</label>
+            <input type="number" name="aptitude_score">
+
+            <label>Communication Skills</label>
+            <input type="number" name="communication_skills">
+
+            <label>ML Knowledge</label>
+            <input type="number" name="ml_knowledge">
+
+            <label>System Design</label>
+            <input type="number" name="system_design">
+
+            <label>Internships</label>
+            <input type="number" name="internships">
+
+            <label>Projects</label>
+            <input type="number" name="projects_count">
+
+            <label>Certifications</label>
+            <input type="number" name="certifications">
+
+            <label>Hackathons</label>
+            <input type="number" name="hackathons">
+
+            <label>Open Source Contributions</label>
+            <input type="number" name="open_source_contributions">
+
+            <label>Extracurricular Activities</label>
+            <input type="number" name="extracurriculars">
+
+            <label>Expected Salary (LPA)</label>
+            <input type="number" step="0.1" name="salary_package_lpa">
+
+            <h3>Branch</h3>
+
+            <label>CSE</label>
+            <input type="number" name="branch_CSE">
+
+            <label>IT</label>
+            <input type="number" name="branch_IT">
+
+            <label>ECE</label>
+            <input type="number" name="branch_ECE">
+
+            <label>EE</label>
+            <input type="number" name="branch_EE">
+
+            <label>ME</label>
+            <input type="number" name="branch_ME">
+
+            <label>Chemical</label>
+            <input type="number" name="branch_Chemical">
+
+            <h3>College Tier</h3>
+
+            <label>Tier 2</label>
+            <input type="number" name="tier2">
+
+            <label>Tier 3</label>
+            <input type="number" name="tier3">
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        <h2>{{ prediction_text }}</h2>
+
+    </div>
+
+</body>
+
+</html>
